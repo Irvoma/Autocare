@@ -10,6 +10,7 @@
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,9 +19,8 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:elevation="5dp">
-            </android.support.v7.widget.CardView>
-
+                android:layout_margin="10dp"
+                android:elevation="5dp"/>
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
@@ -30,6 +30,7 @@
                 android:id="@+id/edit_marca_medicamento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:hint="Marca de Medicamento" />
 
             <android.support.v4.widget.Space
@@ -40,6 +41,7 @@
                 android:id="@+id/edit_Principio_activo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:hint="Principio Activo" />
 
             <android.support.v4.widget.Space
@@ -51,6 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Dosis en mg"
+                android:layout_margin="20dp"
                 android:inputType="numberDecimal" />
 
             <android.support.v4.widget.Space
@@ -61,6 +64,7 @@
                 android:id="@+id/edit_presentacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:hint="Presentacion" />
 
             <android.support.v4.widget.Space
@@ -71,19 +75,37 @@
                 android:id="@+id/edit_unidades"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:hint="Unidades" />
+                android:hint="Unidades"
+                android:layout_margin="20dp"
+                android:inputType="number" />
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
 
-            <Button
-                android:id="@+id/btn_ok"
-                style="@style/Widget.AppCompat.Button.Colored"
+            <android.support.design.widget.CoordinatorLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Aceptar" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_aceptar"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Aceptar" />
+
+                <Button
+                    android:id="@+id/btn_cancelar"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="30dp"
+                    android:text="Cancelar" />
+
+            </android.support.design.widget.CoordinatorLayout>
 
         </LinearLayout>
 

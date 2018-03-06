@@ -84,7 +84,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circulo_dos"
+                    android:background="@drawable/circulo_cuatro"
                     android:padding="10dp"
                     android:src="@drawable/ic_horario"/>
                 <TextView
@@ -175,7 +175,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circulo_cuatro"
+                    android:background="@drawable/circulo_dos"
                     android:padding="10dp"
                     android:src="@drawable/ic_calcular"/>
                 <TextView
