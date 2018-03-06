@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/user_id"
+        android:icon="@drawable/ic_account"
+        android:title="Usuarios"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/cita_id"
+        android:title="Nueva cita">
+    </item>
+    <item
+        android:id="@+id/med_id"
+        android:title="Nuevo medicamento">
+    </item>
+    <item
+        android:id="@+id/sett_id"
+        android:title="Ajustes">
+    </item>
+
+</menu>
