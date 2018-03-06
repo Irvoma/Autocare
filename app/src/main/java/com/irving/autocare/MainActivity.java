@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent1 = new Intent(this,activityCitas.class);
                 startActivity(intent1);
                 break;
-            case  (R.id.hora_card):
+            case (R.id.hora_card):
                 break;
-            case(R.id.medicamentos_card):
+            case (R.id.medicamentos_card):
                 Intent intent3 = new Intent(this,activityMedicamentos.class);
                 startActivity(intent3);
                 break;
-            case  (R.id.calcular_card):
+            case (R.id.calcular_card):
                 break;
             default: break;
         }

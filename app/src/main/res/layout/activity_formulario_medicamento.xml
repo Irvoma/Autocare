@@ -18,13 +18,7 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:elevation="5dp"
-
-                >
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/circulo_uno"/>
+                android:elevation="5dp">
             </android.support.v7.widget.CardView>
 
 
@@ -32,14 +26,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
 
-
-
             <EditText
                 android:id="@+id/edit_marca_medicamento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Marca de Medicamento"
-                />
+                android:hint="Marca de Medicamento" />
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
@@ -49,8 +40,7 @@
                 android:id="@+id/edit_Principio_activo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Principio Activo"
-                />
+                android:hint="Principio Activo" />
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
@@ -71,8 +61,7 @@
                 android:id="@+id/edit_presentacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Presentacion"
-                />
+                android:hint="Presentacion" />
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
@@ -83,8 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:hint="Unidades"
-                />
+                android:hint="Unidades" />
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
@@ -93,12 +81,12 @@
             <Button
                 android:id="@+id/btn_ok"
                 style="@style/Widget.AppCompat.Button.Colored"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Aceptar" />
 
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
