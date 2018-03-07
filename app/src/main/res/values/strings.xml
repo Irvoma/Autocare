@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Autocare</string>
+    <string-array name="tipoDosis">
+        <item>píldoras</item>
+        <item>mL</item>
+        <item>gr</item>
+        <item>mg</item>
+        <item>gotas</item>
+        <item>cucharada</item>
+        <item>cucharadita</item>
+        <item>parche</item>
+        <item>inyecciones</item>
+    </string-array>
 </resources>
