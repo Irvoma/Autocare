@@ -19,7 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".activityMedicamentos" />
-        <activity android:name=".ActivityFormularioMedicamento" />
         <activity android:name=".activityCitas"></activity>
     </application>
 
