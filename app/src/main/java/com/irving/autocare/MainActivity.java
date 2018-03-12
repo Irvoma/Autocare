@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case (R.id.hora_card):
                 break;
             case (R.id.medicamentos_card):
-                Intent intent3 = new Intent(this,activityMedicamentos.class);
-                startActivity(intent3);
+                //Intent intent3 = new Intent(this,activityMedicamentos.class);
+                //startActivity(intent3);
                 break;
             case (R.id.calcular_card):
                 break;
