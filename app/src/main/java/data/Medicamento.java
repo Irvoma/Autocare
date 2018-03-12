@@ -1,5 +1,9 @@
 package data;
 
+import android.content.ContentValues;
+
+import java.util.UUID;
+
 /**
  * Created by IrvingOmar on 11/03/2018.
  */
@@ -12,13 +16,24 @@ public class Medicamento {
     private String empaque;
     private String unidades;
 
-    public Medicamento(String id, String nombre, String dosis, String presentacion, String empaque, String unidades) {
-        this.id = id;
+    public Medicamento(String nombre, String dosis, String presentacion, String empaque, String unidades) {
+        this.id = UUID.randomUUID().toString();
         this.nombre = nombre;
         this.dosis = dosis;
         this.presentacion = presentacion;
         this.empaque = empaque;
         this.unidades = unidades;
+    }
+
+    public ContentValues toContentValues(){
+        ContentValues values = new ContentValues();
+        values.put(MedicamentoContract.MedicamentoEntry.ID, id);
+        values.put(MedicamentoContract.MedicamentoEntry.NOMBRE, nombre);
+        values.put(MedicamentoContract.MedicamentoEntry.DOSIS, dosis);
+        values.put(MedicamentoContract.MedicamentoEntry.PRESENTACION, presentacion);
+        values.put(MedicamentoContract.MedicamentoEntry.EMPAQUE, empaque);
+        values.put(MedicamentoContract.MedicamentoEntry.UNIDADES, unidades);
+        return values;
     }
 
     public void setNombre(String nombre) {

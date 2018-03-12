@@ -18,8 +18,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activityMedicamentos" />
-        <activity android:name=".activityCitas"></activity>
+        <activity android:name=".activityCitas" />
+        <activity
+            android:name=".MedicamentosActivity"
+            android:label="@string/title_activity_medicamentos"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
