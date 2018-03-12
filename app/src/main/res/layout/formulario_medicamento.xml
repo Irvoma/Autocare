@@ -86,7 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Presentacion"
+                    android:hint="Empaque"
                     android:inputType="text"
                     android:singleLine="true"/>
             </android.support.design.widget.TextInputLayout>
@@ -102,7 +102,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Unidades por presentación"
+                    android:hint="Unidades por empaque"
                     android:inputType="number"
                     android:singleLine="true"/>
             </android.support.design.widget.TextInputLayout>
