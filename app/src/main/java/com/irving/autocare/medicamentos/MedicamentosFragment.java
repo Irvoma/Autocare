@@ -38,6 +38,8 @@ public class MedicamentosFragment extends Fragment {
         mMedicamentosAdapter = new MedicamentosCursorAdapter(getActivity(), null);
         mAddButton = (FloatingActionButton) getActivity().findViewById(R.id.fab);
 
+        mMedicamentosList.setAdapter(mMedicamentosAdapter);
+
         mMedicamentosDbHelper = new MedicamentosDbHelper(getActivity());
 
         loadMedicamentos();

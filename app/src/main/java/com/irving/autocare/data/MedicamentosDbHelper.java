@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.irving.autocare.data.MedicamentosContract.MedicamentoEntry;
+
 public class MedicamentosDbHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "Medicamentos.db";
@@ -15,15 +17,15 @@ public class MedicamentosDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE " + MedicamentosContract.MedicamentoEntry.TABLE_NAME + " ("
-                + MedicamentosContract.MedicamentoEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + MedicamentosContract.MedicamentoEntry.ID + " TEXT NOT NULL,"
-                + MedicamentosContract.MedicamentoEntry.NOMBRE + " TEXT NOT NULL,"
-                + MedicamentosContract.MedicamentoEntry.DOSIS + " TEXT NOT NULL,"
-                + MedicamentosContract.MedicamentoEntry.PRESENTACION + " TEXT NOT NULL,"
-                + MedicamentosContract.MedicamentoEntry.EMPAQUE + " TEXT NOT NULL,"
-                + MedicamentosContract.MedicamentoEntry.UNIDADES + " TEXT NOT NULL,"
-                + "UNIQUE (" + MedicamentosContract.MedicamentoEntry.ID + "))"
+        sqLiteDatabase.execSQL("CREATE TABLE " + MedicamentoEntry.TABLE_NAME + " ("
+                + MedicamentoEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + MedicamentoEntry.ID + " TEXT NOT NULL,"
+                + MedicamentoEntry.NOMBRE + " TEXT NOT NULL,"
+                + MedicamentoEntry.DOSIS + " TEXT NOT NULL,"
+                + MedicamentoEntry.PRESENTACION + " TEXT NOT NULL,"
+                + MedicamentoEntry.EMPAQUE + " TEXT NOT NULL,"
+                + MedicamentoEntry.UNIDADES + " TEXT NOT NULL,"
+                + "UNIQUE (" + MedicamentoEntry.ID + "))"
         );
 
         mockData(sqLiteDatabase);
@@ -37,7 +39,7 @@ public class MedicamentosDbHelper extends SQLiteOpenHelper {
     public long saveMedicamento(Medicamento medicamento){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
-        return sqLiteDatabase.insert(MedicamentosContract.MedicamentoEntry.TABLE_NAME,
+        return sqLiteDatabase.insert(MedicamentoEntry.TABLE_NAME,
                 null,
                 medicamento.toContentValues());
     }
@@ -57,7 +59,7 @@ public class MedicamentosDbHelper extends SQLiteOpenHelper {
 
     public long mockMedicamento(SQLiteDatabase db, Medicamento medicamento){
         return db.insert(
-                MedicamentosContract.MedicamentoEntry.TABLE_NAME,
+                MedicamentoEntry.TABLE_NAME,
                 null,
                 medicamento.toContentValues()
         );
@@ -65,7 +67,7 @@ public class MedicamentosDbHelper extends SQLiteOpenHelper {
 
     public Cursor getAllMedicamentos(){
         return getReadableDatabase().query(
-                MedicamentosContract.MedicamentoEntry.TABLE_NAME,
+                MedicamentoEntry.TABLE_NAME,
                 null, null, null, null, null, null);
     }
 }
