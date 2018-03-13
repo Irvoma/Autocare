@@ -1,16 +1,16 @@
 package com.irving.autocare.medicamentos;
 
+import com.irving.autocare.data.MedicamentosContract.MedicamentoEntry;
+import com.irving.autocare.R;
 
+import android.widget.CursorAdapter;
+import android.view.LayoutInflater;
 import android.content.Context;
 import android.database.Cursor;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CursorAdapter;
 import android.widget.TextView;
+import android.view.ViewGroup;
+import android.view.View;
 
-import com.irving.autocare.R;
-import com.irving.autocare.data.MedicamentosContract.MedicamentoEntry;
 
 public class MedicamentosCursorAdapter extends CursorAdapter {
     public MedicamentosCursorAdapter(Context context, Cursor cursor){

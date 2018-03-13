@@ -17,12 +17,18 @@
     android:layout_height="wrap_content"
     android:layout_centerVertical="true"
     android:layout_marginStart="72dp"
-    android:text="New Text"
     android:textAppearance="?textAppearanceListItem"
-    tools:text="Carlos Giron" />
+    tools:text="Fluoxac" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="144dp"
+        android:textAppearance="?textAppearanceListItem"
+        tools:text="500 mg"/>
 
     <ImageView
-        android:id="@+id/iv_avatar"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_centerVertical="true"
