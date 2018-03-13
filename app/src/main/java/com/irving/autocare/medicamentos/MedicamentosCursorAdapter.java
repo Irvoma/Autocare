@@ -25,8 +25,18 @@ public class MedicamentosCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        TextView nameText = (TextView) view.findViewById(R.id.tv_name);
+        TextView linea1 = (TextView) view.findViewById(R.id.tv_name);
+        TextView linea2 = (TextView) view.findViewById(R.id.tv_dosis);
+        TextView linea3 = (TextView) view.findViewById(R.id.tv_descripcion);
+
         String name = cursor.getString(cursor.getColumnIndex(MedicamentoEntry.NOMBRE));
-        nameText.setText(name);
+        String dosis = cursor.getString(cursor.getColumnIndex(MedicamentoEntry.DOSIS))
+                + " " + cursor.getString(cursor.getColumnIndex(MedicamentoEntry.PRESENTACION));;
+        String descripcion = cursor.getString(cursor.getColumnIndex(MedicamentoEntry.EMPAQUE))
+                + " " + cursor.getString(cursor.getColumnIndex(MedicamentoEntry.UNIDADES)) + " unidades";
+
+        linea1.setText(name);
+        linea2.setText(dosis);
+        linea3.setText(descripcion);
     }
 }

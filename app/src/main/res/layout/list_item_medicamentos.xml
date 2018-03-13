@@ -1,40 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="?listPreferredItemHeight"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:paddingBottom="8dp"
     android:paddingRight="16dp"
     android:paddingLeft="16dp"
     android:paddingTop="8dp">
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="72dp"
-        android:textAppearance="?textAppearanceListItem"
-        tools:text="Fluoxac" />
-
-    <TextView
-        android:id="@+id/tv_dosis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="144dp"
-        android:textAppearance="?textAppearanceListItem"
-        tools:text="500 mg"/>
-
     <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_centerVertical="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_medicamento"
-        app:srcCompat="@drawable/circulo_dos" />
+        android:padding="4dp"
+        android:background="@drawable/circulo_uno"
+        android:src="@drawable/ic_frasco" />
 
-</RelativeLayout>
+    <LinearLayout
+        android:paddingStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textAppearance="?textAppearanceListItem"
+            tools:text="Fluoxac" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_dosis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textAppearance="?textAppearanceListItem"
+                tools:text="500 mg"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_descripcion"
+                android:textAppearance="?textAppearanceListItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Caja con 50"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

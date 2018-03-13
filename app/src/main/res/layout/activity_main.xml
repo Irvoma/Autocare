@@ -52,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
+                    android:textColor="#777"
                     android:text="Citas"/>
                 <View
                     android:layout_width="match_parent"
@@ -84,7 +85,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circulo_cuatro"
+                    android:background="@drawable/circulo_uno"
                     android:padding="10dp"
                     android:src="@drawable/ic_horario"/>
                 <TextView
@@ -92,6 +93,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
+                    android:textColor="#777"
                     android:text="Horarios"/>
                 <View
                     android:layout_width="match_parent"
@@ -135,13 +137,14 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circulo_tres"
+                    android:background="@drawable/circulo_uno"
                     android:padding="10dp"
-                    android:src="@drawable/ic_frasco"/>
+                    android:src="@drawable/ic_medicamento"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
+                    android:textColor="#777"
                     android:layout_marginTop="10dp"
                     android:text="Medicamentos"/>
                 <View
@@ -175,7 +178,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circulo_dos"
+                    android:background="@drawable/circulo_uno"
                     android:padding="10dp"
                     android:src="@drawable/ic_calcular"/>
                 <TextView
@@ -183,6 +186,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
+                    android:textColor="#777"
                     android:text="Calcular"/>
                 <View
                     android:layout_width="match_parent"
