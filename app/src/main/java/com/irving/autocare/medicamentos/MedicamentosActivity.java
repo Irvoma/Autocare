@@ -27,8 +27,6 @@ public class MedicamentosActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
 
                 AlertDialog.Builder mBuilder = new AlertDialog.Builder(MedicamentosActivity.this);
                 View myView = getLayoutInflater().inflate(R.layout.formulario_medicamento, null);
@@ -44,6 +42,7 @@ public class MedicamentosActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Toast.makeText(getApplicationContext(), "Aceptar", Toast.LENGTH_SHORT).show();
+
                     }
                 }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
