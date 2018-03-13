@@ -137,7 +137,7 @@
                     android:layout_height="64dp"
                     android:background="@drawable/circulo_tres"
                     android:padding="10dp"
-                    android:src="@drawable/ic_medicamento"/>
+                    android:src="@drawable/ic_frasco"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
