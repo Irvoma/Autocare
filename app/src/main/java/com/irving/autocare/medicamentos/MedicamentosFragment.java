@@ -19,6 +19,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.irving.autocare.R;
+import com.irving.autocare.data.Medicamento;
 import com.irving.autocare.data.MedicamentosDbHelper;
 
 
@@ -120,5 +121,10 @@ public class MedicamentosFragment extends Fragment {
         }
     }
 
-    private class
+    private class addMedicamento extends AsyncTask<Medicamento, Void, Boolean>{
+        @Override
+        protected Boolean doInBackground(Medicamento... medicamentos) {
+            return null;
+        }
+    }
 }
