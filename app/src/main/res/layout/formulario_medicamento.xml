@@ -38,7 +38,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <EditText
+                <android.support.design.widget.TextInputEditText
                     android:id="@+id/nombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <EditText
+                    <android.support.design.widget.TextInputEditText
                         android:id="@+id/dosis"
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <EditText
+                <android.support.design.widget.TextInputEditText
                     android:id="@+id/empaque"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <EditText
+                <android.support.design.widget.TextInputEditText
                     android:id="@+id/unidades"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

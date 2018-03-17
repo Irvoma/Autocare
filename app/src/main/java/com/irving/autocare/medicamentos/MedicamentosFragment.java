@@ -1,9 +1,11 @@
 package com.irving.autocare.medicamentos;
 
+import android.support.v4.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -13,7 +15,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -28,6 +29,12 @@ public class MedicamentosFragment extends Fragment {
     private MedicamentosCursorAdapter mMedicamentosAdapter;
     private ListView mMedicamentosList;
     private FloatingActionButton mAddButton;
+
+    private TextInputEditText nombre;
+    private TextInputEditText dosis;
+    private TextInputEditText empaque;
+    private TextInputEditText unidades;
+    private String medida;
 
     public MedicamentosFragment() {
         // Required empty public constructor
@@ -49,16 +56,21 @@ public class MedicamentosFragment extends Fragment {
 
         mMedicamentosDbHelper = new MedicamentosDbHelper(getActivity());
 
+
+
         loadMedicamentos();
 
         mAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(getContext(), "Aceptar", Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder mBuilder = new AlertDialog.Builder(getContext());
                 View myView = getLayoutInflater().inflate(R.layout.formulario_medicamento, null);
 
                 Spinner spinner = (Spinner) myView.findViewById(R.id.spinner);
+                nombre = (TextInputEditText) myView.findViewById(R.id.nombre);
+                dosis = (TextInputEditText) myView.findViewById(R.id.dosis);
+                unidades = (TextInputEditText) myView.findViewById(R.id.unidades);
+                empaque = (TextInputEditText) myView.findViewById(R.id.empaque);
 
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.tipoDosis,
                         android.R.layout.simple_spinner_item);
@@ -68,25 +80,23 @@ public class MedicamentosFragment extends Fragment {
                 spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long l) {
-                        String medida = (String) adapterView.getItemAtPosition(pos);
+                        medida = (String) adapterView.getItemAtPosition(pos);
                     }
-
                     @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
+                    public void onNothingSelected(AdapterView<?> adapterView) {}
                 });
 
                 mBuilder.setView(myView).setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //agregar medicamento
-                        Toast.makeText(getContext(), "Aceptar", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getContext(), "Aceptar", Toast.LENGTH_SHORT).show();
+                        addMedicamento();
                     }
                 }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getContext(), "Cancelar", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getContext(), "Cancelar", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -121,10 +131,40 @@ public class MedicamentosFragment extends Fragment {
         }
     }
 
-    private class addMedicamento extends AsyncTask<Medicamento, Void, Boolean>{
+    public void addMedicamento(){
+        String nom = nombre.getText().toString();
+        String dos = dosis.getText().toString();
+        String emp = empaque.getText().toString();
+        String uni = unidades.getText().toString();
+
+        if( nom.equals("") || dos.equals("") || emp.equals("") || uni.equals("")){
+            Toast.makeText(getContext(), "Error: campos vacios",Toast.LENGTH_SHORT).show();
+        }else {
+            Medicamento medicamento = new Medicamento(nom, dos, medida, emp, uni);
+            new AddMedicamentoTask().execute(medicamento);
+        }
+
+    }
+
+    private void showAddEditError() {
+        Toast.makeText(getActivity(),
+                "Error al agregar nueva información", Toast.LENGTH_SHORT).show();
+    }
+
+    private void showMedicamentoScreen() {
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.detach(this).attach(this).commit();
+    }
+
+    private class AddMedicamentoTask extends AsyncTask<Medicamento, Void, Boolean>{
         @Override
         protected Boolean doInBackground(Medicamento... medicamentos) {
-            return null;
+            return mMedicamentosDbHelper.saveMedicamento(medicamentos[0]) > 0;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result){
+            showMedicamentoScreen();
         }
     }
 }
