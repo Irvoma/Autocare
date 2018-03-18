@@ -1,7 +1,7 @@
 <resources>
     <item name="visible" type="id" />
     <item name="masked" type="id" />
-    <string name="app_name">Autocare</string>
+    <string name="app_name">Autocuidado</string>
     <string-array name="tipoDosis">
         <item>píldoras</item>
         <item>mL</item>
