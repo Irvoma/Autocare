@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
+import com.irving.autocare.medicamentos.CitasActivity;
 import com.irving.autocare.medicamentos.MedicamentosActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -36,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (view.getId()){
             case (R.id.cita_card):
-                //Intent intent1 = new Intent(this,activityCitas.class);
-                //startActivity(intent1);
+                Intent intent1 = new Intent(this, CitasActivity.class);
+                startActivity(intent1);
                 break;
             case (R.id.hora_card):
                 break;
