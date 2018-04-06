@@ -14,21 +14,26 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".medicamentos.MedicamentosActivity"
             android:label="@string/title_activity_medicamentos"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".medicamentos.CitasActivity"
-            android:label="Citas Programadas"></activity>
+
+        <activity
+            android:name=".medicamentos.CitasActivity"
+            android:label="Citas Programadas"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

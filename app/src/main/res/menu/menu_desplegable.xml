@@ -3,11 +3,7 @@
 
     <item
         android:id="@+id/cita_id"
-        android:title="Agendar cita"/>
-
-    <item
-        android:id="@+id/med_id"
-        android:title="Agregar medicamento"/>
+        android:title="Recordatorios"/>
 
     <item
         android:id="@+id/sett_id"

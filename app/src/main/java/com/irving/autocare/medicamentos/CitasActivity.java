@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.irving.autocare.R;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 
 public class CitasActivity extends AppCompatActivity {
 
@@ -14,5 +15,11 @@ public class CitasActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_citas);
         setSupportActionBar(toolbar);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_citas, menu);
+        return true;
     }
 }
