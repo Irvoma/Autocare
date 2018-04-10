@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="?listPreferredItemHeight"
+    android:minHeight="?android:listPreferredItemHeight"
     android:orientation="horizontal"
     android:paddingBottom="8dp"
     android:paddingRight="16dp"
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:textAppearance="?textAppearanceListItem"
+            android:textAppearance="?android:textAppearanceListItem"
             tools:text="Fluoxac" />
 
         <LinearLayout
@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:textAppearance="?textAppearanceListItem"
+                android:textAppearance="?android:textAppearanceListItem"
                 tools:text="500 mg"/>
 
             <android.support.v4.widget.Space
@@ -50,7 +50,7 @@
 
             <TextView
                 android:id="@+id/tv_descripcion"
-                android:textAppearance="?textAppearanceListItem"
+                android:textAppearance="?android:textAppearanceListItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Caja con 50"/>
